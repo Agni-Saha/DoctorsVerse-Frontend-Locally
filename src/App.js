@@ -28,6 +28,7 @@ class App extends Component {
           onLoading={this.handleSongLoading}
           onPlaying={this.handleSongPlaying}
           onFinishedPlaying={this.handleSongFinishedPlaying}
+          loop = {true}
         />
         <Switch>
           <Route exact path="/" component={Home} />
