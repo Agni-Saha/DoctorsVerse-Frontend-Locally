@@ -30,9 +30,9 @@ export default class docList extends Component {
         let DeptName = localStorage.getItem("DeptName");
         let hospID = localStorage.getItem("hospID");
 
-        // axios.get("https://mocki.io/v1/10050b8d-c576-4d2e-8f9c-af24f054fc0b")
-        axios.get("http://localhost:3001/hospitals/" + hospID)
-        // axios.get("https://doctorsverse-backend.herokuapp.com/hospitals/" + hospID)
+        axios.get("https://mocki.io/v1/c2d83470-497c-4984-a717-e3479ea61bb8")
+            // axios.get("http://localhost:3001/hospitals/" + hospID)
+            // axios.get("https://doctorsverse-backend.herokuapp.com/hospitals/" + hospID)
             .then(response => {
                 const list = response.data;
                 this.setState(
@@ -61,12 +61,12 @@ export default class docList extends Component {
         localStorage.setItem("startTime", startTime);
         localStorage.setItem("docID", newVal);
     }
-    TimetoIST(time){
+    TimetoIST(time) {
         let b = moment(time).tz("Asia/Kolkata");
         //b.add(330,'minutes');
         return b.format('HH:mm A');
     }
-    
+
     DocList() {
         let deptList = [];
         let a = this.state.Response;

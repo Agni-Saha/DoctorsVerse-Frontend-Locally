@@ -18,18 +18,20 @@ import ThankYou from './Components/BookingFolder/Confirm/ThankYou';
 import Profile from './Components/Profile/profilePage'
 
 class App extends Component {
+  componentDidMount() {
+    <Sound
+      url={Abandoned}
+      playStatus={Sound.status.PLAYING}
+      playFromPosition={300 /* in milliseconds */}
+      onLoading={this.handleSongLoading}
+      onPlaying={this.handleSongPlaying}
+      onFinishedPlaying={this.handleSongFinishedPlaying}
+      loop={true}
+    />
+  }
   render() {
     return (
       <div className="App">
-        <Sound
-          url={Abandoned}
-          playStatus={Sound.status.PLAYING}
-          playFromPosition={300 /* in milliseconds */}
-          onLoading={this.handleSongLoading}
-          onPlaying={this.handleSongPlaying}
-          onFinishedPlaying={this.handleSongFinishedPlaying}
-          loop = {true}
-        />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />

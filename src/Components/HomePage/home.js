@@ -61,9 +61,6 @@ export default class home extends Component {
                         <div></div>
                     </div>
                 </div>
-
-                
-
                 <nav className="navbar navbar-expand-md fixed-top top-nav">
                     <div className="container-fluid">
                         <div className="navbar-brand"><strong>DoctorsVerse</strong></div>

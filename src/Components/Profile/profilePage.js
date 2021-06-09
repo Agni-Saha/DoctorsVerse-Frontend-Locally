@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+import {Link} from 'react-scroll';
 import './profileStyle.css'
 import $ from 'jquery'
 import axios from 'axios'
@@ -22,10 +22,10 @@ export default class profilePage extends Component {
     }
     componentDidMount() {
         let id = localStorage.getItem("UserID")
-        // axios.get("https://mocki.io/v1/10050b8d-c576-4d2e-8f9c-af24f054fc0b")
+        axios.get("https://mocki.io/v1/93338c84-b9bf-4153-b974-36c3b15a0c2a")
 
         // axios.get("http://localhost:3001/profile/" + id)
-        axios.get("https://doctorsverse-backend.herokuapp.com/profile/" + id)
+        // axios.get("https://doctorsverse-backend.herokuapp.com/profile/" + id)
             .then(response => {
                 const data = response.data
                 this.setState({
@@ -171,7 +171,7 @@ export default class profilePage extends Component {
                                 <a href="#details">
                                     <span className="rect"></span>
                                     <span className="circle"></span>
-                                    details
+                                    Details
                                 </a>
                             </li>
                             <li>
@@ -182,10 +182,10 @@ export default class profilePage extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="/banner">
+                                <a href="/banner" className="Backpage">
                                     <span className="rect"></span>
                                     <span className="circle"></span>
-                                    logout
+                                    Back to Hospitals Page
                                 </a>
                             </li>
                         </ul>

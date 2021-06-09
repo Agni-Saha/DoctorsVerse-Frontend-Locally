@@ -109,8 +109,9 @@ export default class bookingForm extends Component {
             ErrorText.innerHTML = "Fill Out Correctly!!!!"
         }
         else {
-            axios.post("http://localhost:3001/bookings", formData)
-            // axios.post("https://doctorsverse-backend.herokuapp.com/bookings", formData)
+            // axios.post("http://localhost:3001/bookings", formData)
+            axios.post("/t/6rcgn-1623268350/post", formData)
+                // axios.post("https://doctorsverse-backend.herokuapp.com/bookings", formData)
                 .then(function (response) {
                     localStorage.setItem("bookingID", response.data.id)
                     window.location.href = "/ThankYou";
